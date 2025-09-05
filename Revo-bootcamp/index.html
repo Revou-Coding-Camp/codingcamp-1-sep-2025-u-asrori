@@ -14,17 +14,20 @@
         <li><a href="#about">Tentang</a></li>
         <li><a href="#portfolio">Portofolio</a></li>
         <li><a href="#contact">Kontak</a></li>
+        <li><a href="#todo-input-section">My Todo</a></li>
       </ul>
     </nav>
   </header>
 
+  <!--Hero-->
   <section class="hero">
     <div class="hero-content">
       <h2>Halo, saya [Miftahul Ulum Asrori]</h2>
-      <p>Web Developer | UI/UX Designer | Freelancer</p>
+      <p>"Kerja keras hari ini adalah cerita sukses besok."</p>
     </div>
   </section>
 
+  <!--about section-->
   <section id="about" class="about-section">
      <h2>Tentang Saya</h2>
     <div class="container">
@@ -38,7 +41,7 @@
         </div>
     </div>
   </section>
-
+  <!--portofolio section-->
   <section id="portfolio" class="portfolio">
     <h2>Portofolio</h2>
     <div class="portfolio-grid">
@@ -60,19 +63,87 @@
       <!-- Tambahkan lebih banyak kartu sesuai kebutuhan -->
     </div>
   </section>
+  
+  <!-- contact section -->
+<section id="contact" class="contact">
+  <h2>Kontak</h2>
+  <div class="contact-container">
+    <!-- Formulir -->
+    <div class="contact-form">
+      <h3>Kirim Pesan</h3>
+      <form id="contactForm">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" placeholder="Nama Lengkap" required />
 
-  <section id="contact" class="contact">
-    <h2>Kontak</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Nama" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Pesan" required></textarea>
-      <button type="submit">Kirim</button>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required />
+
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message" placeholder="Pesan" required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+
+    <!-- Info Kontak -->
+    <div class="contact-info">
+      <h3>Info Kontak</h3>
+      <p><strong>Alamat</strong><br>
+        Ambarwinanggun, Ambal, Kebumen</p>
+
+      <p><strong>Telepon</strong><br>
+        <a href="tel:+6285803364447">+62 895622406796</a></p>
+
+      <p><strong>Email</strong><br>
+        <a href="mailto:ulumasrori007@gmail.com">ulumasrori007@gmail.com</a></p>
+
+      <div class="socials">
+        <h4>Folow Me</h4>
+        <a href="https://www.instagram.com/ulum9344/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="32"></a>
+        <a href="https://www.facebook.com/miftakhululum.asrori?locale=id_ID"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="32"></a>
+        <a href="https://www.tiktok.com/@ulumasrori?_t=ZS-8zSplbNZAKT&_r=1"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" width="32"></a>
+      </div>
+
+      <div class="map">
+        <h4>Desaku</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15813.592221015391!2d109.7473951978848!3d-7.747534876338365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7acf56ffffffff%3A0x7f275d73d60cd5b7!2sBalai%20Desa%20Ambarwinangun!5e0!3m2!1sid!2sid!4v1757043926855!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!--todo input section-->
+  <section id="todo-input-section" class="todo-input-section">
+    <h2>MY TODO LIST</h2>
+    <form>
+      <input type="text" id="todo-input" placeholder="tambah text disini...">
+      <input type="date" id="todo-date-input" placeholder="select due date..">
+      <button type="button" id="add-button" onclick="validateInput();">Tambah</button>     
     </form>
+  </section>
+  <!--action list btn-->
+  <section class="actions">
+    <button type="button" class="filter-btn" id="filter-btn">
+        Filter Tasks
+    </button>
+
+    <button class="delete-btn" onclick="deleteAllTodo();">
+        Delete All Tasks
+    </button>
+  </section>
+
+  <!-- Todo List Section -->
+  <section class="todo-section">
+      <h2>List of Todo</h2>
+
+      <ul id="todo-list">
+          <li>No tasks added yet.</li>
+      </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 Nama Kamu. Semua hak dilindungi.</p>
+    <p>&copy; 2025 Miftahul Ulum. Semua hak dilindungi.</p>
   </footer>
 
   <script src="js/script.js"></script>
